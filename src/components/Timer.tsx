@@ -23,7 +23,12 @@ export default function Timer({ running = true }: { running?: boolean }) {
   };
 
   function getTimer() {
-    return `${hours ? `${hours}:` : ""} ${minutes}:${seconds}`;
+    let hours_formatted = (hours + "").padStart(2, "0");
+    let minutes_formatted = (minutes + "").padStart(2, "0");
+    let seconds_formatted = (seconds + "").padStart(2, "0");
+    return `${
+      hours ? `${hours_formatted}:` : ""
+    } ${minutes_formatted}:${seconds_formatted}`;
   }
 
   return <div className="timer">{getTimer()}</div>;
