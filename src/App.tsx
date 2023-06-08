@@ -3,7 +3,7 @@ import Tower from "./components/Tower";
 import Timer from "./components/Timer";
 import "./App.css";
 
-const NUMBER_OF_DISCS = 2;
+const NUMBER_OF_DISCS = 5;
 const NUMBER_OF_TOWERS = 3;
 const GOAL_TOWER_IDX = NUMBER_OF_TOWERS - 1; //Last Tower
 
@@ -46,6 +46,7 @@ export default function App() {
         {!won ? (
           towers.map((discs, idx) => (
             <Tower
+              isGoal={idx == GOAL_TOWER_IDX}
               key={idx}
               discs={discs}
               isSelected={selectedIdx === idx}

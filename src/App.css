@@ -32,6 +32,7 @@
   user-select: none;
 }
 
+
 .tower.selected .disc:first-child {
   background-color: red;
 }
@@ -48,13 +49,18 @@
   z-index: -1;
 }
 
+
+.tower.goal::after {
+  background-color: rgb(255, 208, 0);
+}
+
 .disc {
   height: 20px;
   background-color: blue;
 }
 
 .timer {
-  position: absolute;
+  position: fixed;
   top: 10px;
   right: 10px;
   font-size: 1.5rem;
