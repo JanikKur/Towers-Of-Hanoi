@@ -3,7 +3,7 @@ import Tower from "./components/Tower";
 import Timer from "./components/Timer";
 import "./App.css";
 
-const NUMBER_OF_DISCS = 5;
+const NUMBER_OF_DISCS = 2;
 const NUMBER_OF_TOWERS = 3;
 const GOAL_TOWER_IDX = NUMBER_OF_TOWERS - 1; //Last Tower
 
@@ -40,7 +40,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <Timer />
+      <Timer running={!won} />
       <h1>TOWERS OF HANOI</h1>
       <div className="game">
         {!won ? (

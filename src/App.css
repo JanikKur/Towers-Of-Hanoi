@@ -6,20 +6,20 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.App{
+.App {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   text-align: center;
 }
 
-.game{
+.game {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
 
-.tower{
+.tower {
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -32,11 +32,11 @@
   user-select: none;
 }
 
-.tower.selected .disc:first-child{
+.tower.selected .disc:first-child {
   background-color: red;
 }
 
-.tower::after{
+.tower::after {
   content: "";
   display: block;
   height: 100%;
@@ -48,13 +48,12 @@
   z-index: -1;
 }
 
-.disc{
+.disc {
   height: 20px;
-  width: calc(attr(data-w) + 100px);
   background-color: blue;
 }
 
-.timer{
+.timer {
   position: absolute;
   top: 10px;
   right: 10px;

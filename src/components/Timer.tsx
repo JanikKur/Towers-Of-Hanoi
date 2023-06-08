@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Timer() {
+export default function Timer({ running = true }: { running?: boolean }) {
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
   const [seconds, setSeconds] = useState<number>(0);
@@ -8,9 +8,12 @@ export default function Timer() {
   const START_DATE = Date.now();
 
   useEffect(() => {
+    if (!running) {
+      return;
+    }
     const interval = setInterval(() => updateTimer(), 1000);
     return () => clearInterval(interval);
-  }, []);
+  }, [running]);
 
   const updateTimer = () => {
     const time = Date.now() - START_DATE;

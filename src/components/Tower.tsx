@@ -16,6 +16,7 @@ export default function Tower({ discs, isSelected, onClick }: TowerType) {
         <div
           key={discIdx}
           className="disc"
+          data-w={"red"}
           style={{ width: `${disc * 50 + 50}px` }}
         ></div>
       ))}
